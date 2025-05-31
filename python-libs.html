@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиотеки Python | CodePassion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Логотип CodePassion" class="logo">
+            </a>
+            <h1>CodePassion</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="languages.html">Языки</a></li>
+                <li><a href="python-libs.html" class="active">Библиотеки Python</a></li>
+                <li><a href="neural-networks.html">Нейросети</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="libs-page">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Библиотеки Python для анализа данных</h1>
+                <p>Мощные инструменты для работы с данными, вычислений и визуализации</p>
+            </div>
+        </section>
+
+        <section class="libs-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>Зачем нужны библиотеки для анализа данных?</h2>
+                    <p>Python сам по себе - мощный язык, но его настоящая сила раскрывается с использованием специализированных библиотек. Они предоставляют:</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Производительность</h3>
+                            <p>Оптимизированный код на C/C++ под капотом</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">🧩</div>
+                            <h3>Удобство</h3>
+                            <p>Готовые решения для частых задач</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">📊</div>
+                            <h3>Визуализация</h3>
+                            <p>Средства для наглядного представления данных</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">🔍</div>
+                            <h3>Аналитика</h3>
+                            <p>Инструменты для статистики и ML</p>
+                        </div>
+                    </div>
+                    
+                    <div class="installation">
+                        <h3>Установка библиотек</h3>
+                        <pre><code class="language-bash"># Установка через pip
+pip install pandas numpy matplotlib
+
+# Для работы в Jupyter Notebook
+pip install jupyter</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pandas" class="lib-section">
+            <div class="container">
+                <div class="lib-header">
+                    <img src="pandas-logo.png" alt="Логотип Pandas" class="lib-logo">
+                    <h2>Pandas - анализ табличных данных</h2>
+                </div>
+                
+                <div class="lib-content">
+                    <div class="lib-info">
+                        <p>Pandas предоставляет высокоуровневые структуры данных и инструменты для анализа данных. Основные структуры:</p>
+                        
+                        <div class="data-structures">
+                            <div class="structure">
+                                <h4>Series</h4>
+                                <p>Одномерный массив с метками (индексом)</p>
+                                <pre><code class="language-python">import pandas as pd
+
+s = pd.Series([1, 3, 5, 7], index=['a', 'b', 'c', 'd'])</code></pre>
+                            </div>
+                            
+                            <div class="structure">
+                                <h4>DataFrame</h4>
+                                <p>Двумерная таблица с строками и столбцами</p>
+                                <pre><code class="language-python">data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['Moscow', 'London', 'Paris']
+}
+
+df = pd.DataFrame(data)</code></pre>
+                            </div>
+                        </div>
+                        
+                        <h3>Основные операции</h3>
+                        <ul>
+                            <li><strong>Чтение данных:</strong> CSV, Excel, SQL, JSON</li>
+                            <li><strong>Очистка данных:</strong> обработка пропусков, дубликатов</li>
+                            <li><strong>Преобразования:</strong> фильтрация, сортировка, группировка</li>
+                            <li><strong>Агрегация:</strong> статистические вычисления</li>
+                            <li><strong>Слияние данных:</strong> объединение таблиц</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="lib-demo">
+                        <h3>Пример: Анализ данных о фильмах</h3>
+                        <div class="code-demo">
+                            <pre><code class="language-python"># Создаем DataFrame
+movies = pd.DataFrame({
+    'Title': ['Inception', 'Interstellar', 'The Matrix', 'Tenet'],
+    'Year': [2010, 2014, 1999, 2020],
+    'Director': ['Christopher Nolan', 'Christopher Nolan', 'Lana Wachowski', 'Christopher Nolan'],
+    'Rating': [8.8, 8.6, 8.7, 7.4]
+})
+
+# Фильтруем фильмы Нолана
+nolan_movies = movies[movies['Director'] == 'Christopher Nolan']
+
+# Группируем по режиссеру и считаем средний рейтинг
+avg_rating = movies.groupby('Director')['Rating'].mean()
+
+print("Фильмы Нолана:")
+print(nolan_movies)
+print("\nСредний рейтинг по режиссерам:")
+print(avg_rating)</code></pre>
+                            
+                            <div class="output">
+                                <h4>Результат:</h4>
+                                <img src="pandas-output.gif" alt="Пример работы с Pandas" class="demo-gif">
+                            </div>
+                        </div>
+                        
+                        <div class="real-world">
+                            <h4>Применение в реальных проектах:</h4>
+                            <ul>
+                                <li>Анализ финансовых данных</li>
+                                <li>Обработка логов веб-серверов</li>
+                                <li>Подготовка данных для машинного обучения</li>
+                                <li>Анализ пользовательской активности</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="numpy" class="lib-section">
+            <div class="container">
+                <div class="lib-header">
+                    <img src="numpy-logo.png" alt="Логотип NumPy" class="lib-logo">
+                    <h2>NumPy - вычисления с массивами</h2>
+                </div>
+                
+                <div class="lib-content">
+                    <div class="lib-info">
+                        <p>NumPy - фундаментальная библиотека для научных вычислений в Python. Основные возможности:</p>
+                        
+                        <div class="numpy-features">
+                            <div class="feature">
+                                <h4>Многомерные массивы</h4>
+                                <p>Быстрые и эффективные n-мерные массивы</p>
+                            </div>
+                            
+                            <div class="feature">
+                                <h4>Векторизация</h4>
+                                <p>Операции над целыми массивами без циклов</p>
+                            </div>
+                            
+                            <div class="feature">
+                                <h4>Линейная алгебра</h4>
+                                <p>Матричные операции, разложения</p>
+                            </div>
+                            
+                            <div class="feature">
+                                <h4>Генерация данных</h4>
+                                <p>Случайные числа, последовательности</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Основные преимущества</h3>
+                        <ul>
+                            <li><strong>Производительность:</strong> Оптимизированные операции на C</li>
+                            <li><strong>Удобство:</strong> Единый интерфейс для различных операций</li>
+                            <li><strong>Интеграция:</strong> Основа для многих других библиотек (SciPy, scikit-learn)</li>
+                            <li><strong>Широкие возможности:</strong> Математические функции, работа с Фурье, статистика</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="lib-demo">
+                        <h3>Пример: Работа с матрицами</h3>
+                        <div class="code-demo">
+                            <pre><code class="language-python">import numpy as np
+
+# Создаем матрицу 3x3
+matrix = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+# Транспонирование матрицы
+transposed = matrix.T
+
+# Определитель матрицы
+determinant = np.linalg.det(matrix)
+
+# Обратная матрица
+inverse = np.linalg.inv(matrix + np.eye(3))  # Добавляем единичную матрицу для обратимости
+
+print("Исходная матрица:")
+print(matrix)
+print("\nТранспонированная матрица:")
+print(transposed)
+print(f"\nОпределитель: {determinant:.2f}")
+print("\nОбратная матрица:")
+print(inverse)</code></pre>
+                            
+                            <div class="output">
+                                <h4>Результат:</h4>
+                                <img src="numpy-output.gif" alt="Пример работы с NumPy" class="demo-gif">
+                            </div>
+                        </div>
+                        
+                        <div class="performance">
+                            <h4>Сравнение производительности:</h4>
+                            <div class="perf-chart">
+                                <img src="numpy-perf.png" alt="Сравнение производительности NumPy и чистого Python">
+                                <p>NumPy значительно быстрее благодаря векторизации операций</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="matplotlib" class="lib-section">
+            <div class="container">
+                <div class="lib-header">
+                    <img src="matplotlib-logo.png" alt="Логотип Matplotlib" class="lib-logo">
+                    <h2>Matplotlib - визуализация данных</h2>
+                </div>
+                
+                <div class="lib-content">
+                    <div class="lib-info">
+                        <p>Matplotlib - основная библиотека для создания статичных, анимированных и интерактивных визуализаций в Python.</p>
+                        
+                        <h3>Основные компоненты</h3>
+                        <div class="components">
+                            <div class="component">
+                                <h4>Figure</h4>
+                                <p>Область для построения графиков (холст)</p>
+                            </div>
+                            
+                            <div class="component">
+                                <h4>Axes</h4>
+                                <p>Отдельный график с координатными осями</p>
+                            </div>
+                            
+                            <div class="component">
+                                <h4>Axis</h4>
+                                <p>Оси координат с делениями и метками</p>
+                            </div>
+                            
+                            <div class="component">
+                                <h4>Artist</h4>
+                                <p>Все визуальные элементы (текст, линии, фигуры)</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Типы визуализаций</h3>
+                        <div class="viz-types">
+                            <div class="viz-type">
+                                <img src="line-chart-icon.png" alt="Линейный график">
+                                <p>Линейные графики</p>
+                            </div>
+                            <div class="viz-type">
+                                <img src="bar-chart-icon.png" alt="Столбчатая диаграмма">
+                                <p>Столбчатые диаграммы</p>
+                            </div>
+                            <div class="viz-type">
+                                <img src="histogram-icon.png" alt="Гистограмма">
+                                <p>Гистограммы</p>
+                            </div>
+                            <div class="viz-type">
+                                <img src="scatter-icon.png" alt="Точечная диаграмма">
+                                <p>Точечные диаграммы</p>
+                            </div>
+                            <div class="viz-type">
+                                <img src="pie-chart-icon.png" alt="Круговая диаграмма">
+                                <p>Круговые диаграммы</p>
+                            </div>
+                            <div class="viz-type">
+                                <img src="heatmap-icon.png" alt="Тепловая карта">
+                                <p>Тепловые карты</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lib-demo">
+                        <h3>Пример: Визуализация данных</h3>
+                        <div class="code-demo">
+                            <pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+# Создаем данные
+x = np.linspace(0, 10, 100)
+y1 = np.sin(x)
+y2 = np.cos(x)
+y3 = np.random.normal(0, 0.1, 100)
+
+# Создаем фигуру с несколькими областями
+fig, axs = plt.subplots(2, 2, figsize=(12, 8))
+
+# Линейный график
+axs[0, 0].plot(x, y1, 'r-', label='sin(x)')
+axs[0, 0].set_title('Синусоида')
+axs[0, 0].legend()
+
+# Столбчатая диаграмма
+categories = ['A', 'B', 'C', 'D']
+values = [23, 45, 56, 78]
+axs[0, 1].bar(categories, values, color='skyblue')
+axs[0, 1].set_title('Столбчатая диаграмма')
+
+# Точечная диаграмма
+axs[1, 0].scatter(x, y3, alpha=0.5)
+axs[1, 0].set_title('Точечный график')
+
+# Гистограмма
+data = np.random.randn(1000)
+axs[1, 1].hist(data, bins=30, color='green', alpha=0.7)
+axs[1, 1].set_title('Гистограмма')
+
+plt.tight_layout()
+plt.show()</code></pre>
+                            
+                            <div class="output">
+                                <h4>Результат:</h4>
+                                <img src="matplotlib-output.png" alt="Пример визуализаций Matplotlib" class="demo-image">
+                            </div>
+                        </div>
+                        
+                        <div class="interactive-demo">
+                            <h4>Интерактивная визуализация:</h4>
+                            <div class="plot-controls">
+                                <label for="plot-type">Тип графика:</label>
+                                <select id="plot-type">
+                                    <option value="line">Линейный</option>
+                                    <option value="bar">Столбчатый</option>
+                                    <option value="scatter">Точечный</option>
+                                </select>
+                                
+                                <label for="color-select">Цвет:</label>
+                                <select id="color-select">
+                                    <option value="blue">Синий</option>
+                                    <option value="red">Красный</option>
+                                    <option value="green">Зеленый</option>
+                                </select>
+                                
+                                <button id="update-plot">Обновить график</button>
+                            </div>
+                            
+                            <div class="plot-area">
+                                <img src="interactive-plot.gif" alt="Интерактивная визуализация" id="dynamic-plot">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="libs-combination">
+            <div class="container">
+                <h2>Комбинирование библиотек</h2>
+                <p>Настоящая сила этих библиотек раскрывается при их совместном использовании:</p>
+                
+                <div class="workflow">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Загрузка данных</h3>
+                        <p>Pandas для чтения данных из различных источников</p>
+                        <div class="lib-badge pandas">Pandas</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Обработка данных</h3>
+                        <p>Очистка, преобразование и подготовка данных</p>
+                        <div class="lib-badge pandas">Pandas</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Математические операции</h3>
+                        <p>Численные вычисления, линейная алгебра</p>
+                        <div class="lib-badge numpy">NumPy</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Визуализация</h3>
+                        <p>Создание графиков и диаграмм</p>
+                        <div class="lib-badge matplotlib">Matplotlib</div>
+                    </div>
+                </div>
+                
+                <div class="full-example">
+                    <h3>Полный пример анализа данных</h3>
+                    <pre><code class="language-python">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. Загрузка данных
+data = pd.read_csv('sales_data.csv')
+
+# 2. Обработка данных
+data['Date'] = pd.to_datetime(data['Date'])
+data['Month'] = data['Date'].dt.month
+data['Revenue'] = data['Price'] * data['Quantity']
+
+# 3. Анализ
+monthly_sales = data.groupby('Month')['Revenue'].sum()
+avg_sales = np.mean(monthly_sales)
+std_sales = np.std(monthly_sales)
+
+# 4. Визуализация
+plt.figure(figsize=(10, 6))
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+plt.bar(months, monthly_sales, color='teal')
+plt.axhline(avg_sales, color='red', linestyle='--', label=f'Среднее: ${avg_sales:,.2f}')
+plt.fill_between(months, avg_sales-std_sales, avg_sales+std_sales, 
+                 color='red', alpha=0.1, label='±1 std')
+plt.title('Ежемесячные продажи')
+plt.xlabel('Месяц')
+plt.ylabel('Выручка ($)')
+plt.legend()
+plt.grid(alpha=0.3)
+plt.tight_layout()
+plt.show()</code></pre>
+                    
+                    <div class="result">
+                        <h4>Результат анализа:</h4>
+                        <img src="full-analysis.png" alt="Результат комплексного анализа данных" class="demo-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2023 CodePassion. Все права защищены.</p>
+        <div class="footer-links">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="404.html">Страница 404</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Скрипт для интерактивной визуализации
+        document.getElementById('update-plot').addEventListener('click', function() {
+            const plotType = document.getElementById('plot-type').value;
+            const color = document.getElementById('color-select').value;
+            
+            const plotImg = document.getElementById('dynamic-plot');
+            plotImg.src = `plot-${plotType}-${color}.gif?t=${new Date().getTime()}`;
+            
+            // Анимация обновления
+            plotImg.style.opacity = '0.5';
+            setTimeout(() => {
+                plotImg.style.opacity = '1';
+            }, 300);
+        });
+    </script>
+</body>
+</html>

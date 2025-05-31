@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена | CodePassion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="error-page">
+    <div class="glitch-effect"></div>
+    
+    <div class="error-content">
+        <div class="robot-animation">
+            <div class="robot">
+                <div class="robot-body"></div>
+                <div class="robot-head">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                </div>
+                <div class="robot-arm left"></div>
+                <div class="robot-arm right"></div>
+            </div>
+        </div>
+        
+        <div class="error-code">404</div>
+        <h1 class="error-message">ОШИБКА: СТРАНИЦА НЕ НАЙДЕНА</h1>
+        <p class="error-description">
+            Похоже, вы попали в цифровую пустоту. Возможно, страница была перемещена, 
+            удалена или вы ввели неправильный URL. Давайте вернем вас на безопасную территорию!
+        </p>
+        
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="terminal-button button-red"></div>
+                    <div class="terminal-button button-yellow"></div>
+                    <div class="terminal-button button-green"></div>
+                </div>
+                <div class="terminal-title">root@codepassion:~</div>
+            </div>
+            
+            <div class="terminal-body" id="terminal-output">
+                <div class="terminal-line">> Проверка доступности страницы...</div>
+                <div class="terminal-line error">Ошибка 404: Страница не найдена</div>
+                <div class="terminal-line">> Анализ возможных причин...</div>
+                <div class="terminal-line">- Неправильный URL</div>
+                <div class="terminal-line">- Удаленная страница</div>
+                <div class="terminal-line">- Ошибка в ссылке</div>
+                <div class="terminal-line">> Поиск альтернативных решений...</div>
+                <div class="terminal-line info">Решение найдено: Вернуться на главную страницу</div>
+                <div class="terminal-line">> Выполнить команду: <span class="command">navigate_home()</span></div>
+            </div>
+            
+            <div class="terminal-input">
+                <span class="terminal-prompt">>></span>
+                <span id="typing-text"></span>
+                <span class="terminal-cursor"></span>
+            </div>
+        </div>
+        
+        <a href="index.html" class="home-button">Вернуться на главную</a>
+    </div>
+
+    <script>
+        // Скрипт для анимированного набора текста в терминале
+        document.addEventListener('DOMContentLoaded', function() {
+            const terminalOutput = document.getElementById('terminal-output');
+            const typingText = document.getElementById('typing-text');
+            const commands = [
+                "help",
+                "status --page",
+                "diagnose error_404",
+                "navigate_home()"
+            ];
+            
+            let commandIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            
+            function typeCommand() {
+                const currentCommand = commands[commandIndex];
+                
+                if (isDeleting) {
+                    // Удаление символов
+                    typingText.textContent = currentCommand.substring(0, charIndex - 1);
+                    charIndex--;
+                    
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        commandIndex = (commandIndex + 1) % commands.length;
+                        setTimeout(typeCommand, 500);
+                    } else {
+                        setTimeout(typeCommand, 100);
+                    }
+                } else {
+                    // Набор символов
+                    typingText.textContent = currentCommand.substring(0, charIndex + 1);
+                    charIndex++;
+                    
+                    if (charIndex === currentCommand.length) {
+                        isDeleting = true;
+                        setTimeout(typeCommand, 1500);
+                    } else {
+                        setTimeout(typeCommand, 150);
+                    }
+                }
+            }
+            
+            // Инициируем процесс набора текста
+            setTimeout(typeCommand, 1000);
+            
+            // Добавляем сообщение о выполнении команды
+            setTimeout(() => {
+                const newLine = document.createElement('div');
+                newLine.className = 'terminal-line';
+                newLine.textContent = '> Команда выполнена успешно. Перенаправление на главную страницу...';
+                terminalOutput.appendChild(newLine);
+                
+                // Прокручиваем терминал вниз
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            }, 8000);
+            
+            // Случайные сообщения в терминале
+            const messages = [
+                "> Проверка системы... OK",
+                "> Сканирование сети... завершено",
+                "> Обновление кеша... выполнено",
+                "> Мониторинг безопасности... активен"
+            ];
+            
+            let messageIndex = 0;
+            
+            function addRandomMessage() {
+                if (messageIndex < messages.length) {
+                    const newLine = document.createElement('div');
+                    newLine.className = 'terminal-line';
+                    newLine.textContent = messages[messageIndex];
+                    terminalOutput.appendChild(newLine);
+                    
+                    // Прокручиваем терминал вниз
+                    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+                    
+                    messageIndex++;
+                    setTimeout(addRandomMessage, Math.random() * 3000 + 2000);
+                }
+            }
+            
+            // Запускаем добавление сообщений
+            setTimeout(addRandomMessage, 4000);
+        });
+    </script>
+</body>
+</html>

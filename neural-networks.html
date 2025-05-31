@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нейросети и ИИ | CodePassion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Логотип CodePassion" class="logo">
+            </a>
+            <h1>CodePassion</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="languages.html">Языки</a></li>
+                <li><a href="python-libs.html">Библиотеки Python</a></li>
+                <li><a href="neural-networks.html" class="active">Нейросети</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="neural-page">
+        <section class="page-hero neural-hero">
+            <div class="container">
+                <h1>Нейросети и Искусственный Интеллект</h1>
+                <p>Исследуем мир машинного обучения и нейронных сетей</p>
+                <div class="ai-animation">
+                    <div class="neuron"></div>
+                    <div class="pulse"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="neural-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#evolution">Эволюция ИИ</a></li>
+                    <li><a href="#how-it-works">Как работают</a></li>
+                    <li><a href="#types">Типы нейросетей</a></li>
+                    <li><a href="#applications">Применение</a></li>
+                    <li><a href="#try-demo">Попробовать</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="evolution" class="evolution-section">
+            <div class="container">
+                <h2>Эволюция нейросетей</h2>
+                <p class="section-subtitle">От простых перцептронов к современным трансформерам</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1958</div>
+                        <div class="timeline-content">
+                            <h3>Перцептрон Розенблатта</h3>
+                            <p>Первая модель искусственного нейрона, способная к обучению</p>
+                            <div class="model-img">
+                                <img src="perceptron.png" alt="Перцептрон Розенблатта">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1986</div>
+                        <div class="timeline-content">
+                            <h3>Обратное распространение ошибки</h3>
+                            <p>Ключевой алгоритм обучения многослойных сетей</p>
+                            <div class="model-img">
+                                <img src="backprop.png" alt="Обратное распространение ошибки">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012</div>
+                        <div class="timeline-content">
+                            <h3>AlexNet и революция CNN</h3>
+                            <p>Победа на ImageNet с использованием сверточных сетей</p>
+                            <div class="model-img">
+                                <img src="alexnet.png" alt="Архитектура AlexNet">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-content">
+                            <h3>Трансформеры</h3>
+                            <p>Архитектура, изменившая NLP (BERT, GPT)</p>
+                            <div class="model-img">
+                                <img src="transformer.png" alt="Архитектура трансформера">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020+</div>
+                        <div class="timeline-content">
+                            <h3>Large Language Models</h3>
+                            <p>Мультимодальные модели: GPT-4, Gemini, Claude</p>
+                            <div class="model-img">
+                                <img src="llm.png" alt="Большие языковые модели">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-chart">
+                    <h3>Рост производительности моделей</h3>
+                    <div class="chart-container">
+                        <img src="ai-progress.png" alt="Прогресс в развитии ИИ">
+                        <div class="chart-point" style="left: 10%; top: 20%;">1958: Перцептрон</div>
+                        <div class="chart-point" style="left: 30%; top: 35%;">1986: Обратное распространение</div>
+                        <div class="chart-point" style="left: 50%; top: 55%;">2012: AlexNet</div>
+                        <div class="chart-point" style="left: 70%; top: 80%;">2017: Трансформеры</div>
+                        <div class="chart-point" style="left: 90%; top: 95%;">2023: GPT-4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="working-section">
+            <div class="container">
+                <h2>Как работают нейронные сети</h2>
+                <p class="section-subtitle">Пошаговое объяснение с интерактивной демонстрацией</p>
+                
+                <div class="neural-explanation">
+                    <div class="explanation-step">
+                        <div class="step-number">1</div>
+                        <h3>Искусственный нейрон</h3>
+                        <p>Основной строительный блок, имитирующий биологический нейрон</p>
+                        <div class="neuron-demo">
+                            <div class="inputs">
+                                <span>x₁ = 0.8</span>
+                                <span>x₂ = 0.3</span>
+                                <span>x₃ = 0.5</span>
+                            </div>
+                            <div class="neuron">
+                                <div class="nucleus">Σ</div>
+                                <div class="weights">
+                                    <span>w₁=0.6</span>
+                                    <span>w₂=0.4</span>
+                                    <span>w₃=0.9</span>
+                                </div>
+                            </div>
+                            <div class="output">
+                                <span>y = <span id="neuron-output">0.0</span></span>
+                            </div>
+                        </div>
+                        <div class="calc-formula">
+                            <p>y = f(Σ wᵢ·xᵢ + b)</p>
+                            <div class="sliders">
+                                <label>
+                                    w₁: <input type="range" min="0" max="20" value="6" class="weight-slider" data-index="0">
+                                    <span class="slider-value">0.6</span>
+                                </label>
+                                <label>
+                                    w₂: <input type="range" min="0" max="20" value="4" class="weight-slider" data-index="1">
+                                    <span class="slider-value">0.4</span>
+                                </label>
+                                <label>
+                                    w₃: <input type="range" min="0" max="20" value="9" class="weight-slider" data-index="2">
+                                    <span class="slider-value">0.9</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation-step">
+                        <div class="step-number">2</div>
+                        <h3>Многослойная сеть</h3>
+                        <p>Нейроны объединяются в слои: входной, скрытые, выходной</p>
+                        <div class="network-demo">
+                            <div class="network-visualization">
+                                <img src="neural-network.gif" alt="Анимация работы нейронной сети">
+                            </div>
+                            <div class="network-layers">
+                                <div class="layer input-layer">
+                                    <h4>Входной слой</h4>
+                                    <p>Получает исходные данные</p>
+                                </div>
+                                <div class="layer hidden-layer">
+                                    <h4>Скрытые слои</h4>
+                                    <p>Выполняют преобразования данных</p>
+                                </div>
+                                <div class="layer output-layer">
+                                    <h4>Выходной слой</h4>
+                                    <p>Выдает результат работы сети</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation-step">
+                        <div class="step-number">3</div>
+                        <h3>Обучение сети</h3>
+                        <p>Процесс настройки весов для минимизации ошибки</p>
+                        <div class="learning-process">
+                            <div class="learning-steps">
+                                <div class="learning-step">
+                                    <h4>Прямое распространение</h4>
+                                    <p>Вычисление предсказания сети</p>
+                                </div>
+                                <div class="learning-step">
+                                    <h4>Расчет ошибки</h4>
+                                    <p>Сравнение с правильным ответом</p>
+                                </div>
+                                <div class="learning-step">
+                                    <h4>Обратное распространение</h4>
+                                    <p>Корректировка весов для уменьшения ошибки</p>
+                                </div>
+                            </div>
+                            <div class="error-graph">
+                                <img src="learning-curve.png" alt="Кривая обучения нейросети">
+                                <p>Снижение ошибки с каждой эпохой обучения</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="types-section">
+            <div class="container">
+                <h2>Типы нейронных сетей</h2>
+                <p class="section-subtitle">Специализированные архитектуры для разных задач</p>
+                
+                <div class="network-types">
+                    <div class="network-card">
+                        <div class="network-icon">
+                            <img src="cnn-icon.png" alt="CNN иконка">
+                        </div>
+                        <h3>Сверточные сети (CNN)</h3>
+                        <p>Для работы с изображениями и видео</p>
+                        <div class="network-details">
+                            <ul>
+                                <li>Сверточные слои для выявления признаков</li>
+                                <li>Пулинг-слои для уменьшения размерности</li>
+                                <li>Применение: классификация изображений, распознавание объектов</li>
+                            </ul>
+                            <div class="network-example">
+                                <img src="cnn-demo.gif" alt="Демонстрация CNN">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-card">
+                        <div class="network-icon">
+                            <img src="rnn-icon.png" alt="RNN иконка">
+                        </div>
+                        <h3>Рекуррентные сети (RNN/LSTM)</h3>
+                        <p>Для последовательных данных (текст, речь, временные ряды)</p>
+                        <div class="network-details">
+                            <ul>
+                                <li>Память для учета предыдущих состояний</li>
+                                <li>LSTM и GRU для решения проблемы затухающего градиента</li>
+                                <li>Применение: машинный перевод, генерация текста</li>
+                            </ul>
+                            <div class="network-example">
+                                <img src="rnn-demo.gif" alt="Демонстрация RNN">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-card">
+                        <div class="network-icon">
+                            <img src="transformer-icon.png" alt="Трансформер иконка">
+                        </div>
+                        <h3>Трансформеры</h3>
+                        <p>Для обработки естественного языка (NLP)</p>
+                        <div class="network-details">
+                            <ul>
+                                <li>Механизм внимания (attention)</li>
+                                <li>Параллельная обработка последовательностей</li>
+                                <li>Применение: GPT, BERT, современные LLM</li>
+                            </ul>
+                            <div class="network-example">
+                                <img src="transformer-demo.gif" alt="Демонстрация трансформера">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="network-card">
+                        <div class="network-icon">
+                            <img src="gan-icon.png" alt="GAN иконка">
+                        </div>
+                        <h3>GAN (Generative Adversarial Networks)</h3>
+                        <p>Для генерации новых данных</p>
+                        <div class="network-details">
+                            <ul>
+                                <li>Две сети: генератор и дискриминатор</li>
+                                <li>Состязательное обучение</li>
+                                <li>Применение: создание изображений, анимаций, стилизация</li>
+                            </ul>
+                            <div class="network-example">
+                                <img src="gan-progress.gif" alt="Прогресс обучения GAN">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications" class="applications-section">
+            <div class="container">
+                <h2>Практическое применение нейросетей</h2>
+                <p class="section-subtitle">Реальные кейсы использования ИИ в различных областях</p>
+                
+                <div class="application-cards">
+                    <div class="app-card">
+                        <div class="app-header">
+                            <img src="vision-icon.png" alt="Компьютерное зрение">
+                            <h3>Компьютерное зрение</h3>
+                        </div>
+                        <ul>
+                            <li>Распознавание объектов на изображениях</li>
+                            <li>Медицинская диагностика по снимкам</li>
+                            <li>Автономные транспортные средства</li>
+                            <li>Системы видеонаблюдения</li>
+                        </ul>
+                        <div class="app-demo">
+                            <img src="vision-demo.gif" alt="Демонстрация компьютерного зрения">
+                        </div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-header">
+                            <img src="nlp-icon.png" alt="Обработка естественного языка">
+                            <h3>Обработка языка (NLP)</h3>
+                        </div>
+                        <ul>
+                            <li>Машинный перевод (Google Translate)</li>
+                            <li>Чат-боты и виртуальные ассистенты</li>
+                            <li>Анализ тональности текста</li>
+                            <li>Генерация текста (ChatGPT)</li>
+                        </ul>
+                        <div class="app-demo">
+                            <img src="nlp-demo.gif" alt="Демонстрация NLP">
+                        </div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-header">
+                            <img src="audio-icon.png" alt="Обработка звука">
+                            <h3>Обработка звука</h3>
+                        </div>
+                        <ul>
+                            <li>Распознавание речи (Siri, Alexa)</li>
+                            <li>Синтез речи</li>
+                            <li>Шумоподавление</li>
+                            <li>Генерация музыки</li>
+                        </ul>
+                        <div class="app-demo">
+                            <img src="audio-demo.gif" alt="Демонстрация обработки звука">
+                        </div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-header">
+                            <img src="generative-icon.png" alt="Генеративный ИИ">
+                            <h3>Генеративный ИИ</h3>
+                        </div>
+                        <ul>
+                            <li>Создание изображений по описанию (DALL-E)</li>
+                            <li>Генерация видео</li>
+                            <li>Дизайн и архитектура</li>
+                            <li>Создание игровых миров</li>
+                        </ul>
+                        <div class="app-demo">
+                            <img src="generative-demo.gif" alt="Демонстрация генеративного ИИ">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-ethics">
+                    <h3>Этические вопросы ИИ</h3>
+                    <div class="ethics-content">
+                        <div class="ethics-issue">
+                            <h4>Смещение данных (Bias)</h4>
+                            <p>Модели могут воспроизводить предвзятость, присутствующую в обучающих данных</p>
+                        </div>
+                        <div class="ethics-issue">
+                            <h4>Конфиденциальность</h4>
+                            <p>Использование персональных данных для обучения моделей</p>
+                        </div>
+                        <div class="ethics-issue">
+                            <h4>Авторское право</h4>
+                            <p>Правовой статус контента, созданного ИИ</p>
+                        </div>
+                        <div class="ethics-issue">
+                            <h4>Безопасность</h4>
+                            <p>Возможности злонамеренного использования ИИ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="try-demo" class="demo-section">
+            <div class="container">
+                <h2>Попробуйте нейросети в действии</h2>
+                <p class="section-subtitle">Интерактивные демонстрации</p>
+                
+                <div class="demos">
+                    <div class="demo-card">
+                        <h3>Распознавание рукописных цифр</h3>
+                        <div class="drawing-area">
+                            <canvas id="drawing-canvas" width="280" height="280"></canvas>
+                            <div class="canvas-controls">
+                                <button id="clear-canvas">Очистить</button>
+                                <button id="recognize-btn">Распознать</button>
+                            </div>
+                        </div>
+                        <div class="prediction-result">
+                            <p>Сеть считает, что это цифра: <span id="prediction">-</span></p>
+                            <div class="confidence-bars">
+                                <div class="confidence-bar" data-digit="0">
+                                    <span>0</span>
+                                    <div class="bar"><div class="fill" style="width: 0%"></div></div>
+                                    <span class="percent">0%</span>
+                                </div>
+                                <!-- Повторить для цифр 1-9 -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-card">
+                        <h3>Генерация текста</h3>
+                        <div class="text-generation">
+                            <textarea id="prompt-input" placeholder="Введите начало текста...">Нейронные сети - это</textarea>
+                            <button id="generate-btn">Сгенерировать</button>
+                            <div class="generation-result">
+                                <p id="generated-text">...мощный инструмент для решения сложных задач искусственного интеллекта, который имитирует работу человеческого мозга.</p>
+                                <div class="loading-animation">
+                                    <div class="loading-dot"></div>
+                                    <div class="loading-dot"></div>
+                                    <div class="loading-dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simple-nn-code">
+                    <h3>Пример простой нейросети на Python</h3>
+                    <pre><code class="language-python">import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Создаем модель
+model = models.Sequential([
+    layers.Flatten(input_shape=(28, 28)),  # Входной слой
+    layers.Dense(128, activation='relu'),  # Скрытый слой
+    layers.Dense(10, activation='softmax') # Выходной слой
+])
+
+# Компилируем модель
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Обучаем модель
+model.fit(train_images, train_labels, epochs=5)
+
+# Оцениваем производительность
+test_loss, test_acc = model.evaluate(test_images, test_labels)
+print(f"Точность на тестовых данных: {test_acc}")</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="future-section">
+            <div class="container">
+                <h2>Будущее нейросетей</h2>
+                <div class="future-predictions">
+                    <div class="prediction">
+                        <h3>2025-2030</h3>
+                        <ul>
+                            <li>Мультимодальные модели</li>
+                            <li>ИИ-ассистенты в повседневной жизни</li>
+                            <li>Персонализированная медицина</li>
+                        </ul>
+                    </div>
+                    <div class="prediction">
+                        <h3>2030-2040</h3>
+                        <ul>
+                            <li>ИИ для научных открытий</li>
+                            <li>Нейроинтерфейсы</li>
+                            <li>Продвинутая робототехника</li>
+                        </ul>
+                    </div>
+                    <div class="prediction">
+                        <h3>После 2040</h3>
+                        <ul>
+                            <li>Искусственный общий интеллект (AGI)</li>
+                            <li>Сильное регулирование ИИ</li>
+                            <li>Этические и философские вопросы</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ai-quote">
+                    <p>"Искусственный интеллект - это новое электричество. Так же, как электричество изменило все отрасли 100 лет назад, ИИ изменит все отрасли в ближайшие 10 лет."</p>
+                    <p class="author">- Эндрю Ын, профессор Стэнфорда</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2023 CodePassion. Все права защищены.</p>
+        <div class="footer-links">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="404.html">Страница 404</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Скрипт для демонстрации нейрона
+        document.querySelectorAll('.weight-slider').forEach(slider => {
+            slider.addEventListener('input', function() {
+                const value = (this.value / 10).toFixed(1);
+                const index = this.dataset.index;
+                this.nextElementSibling.textContent = value;
+                
+                // Обновляем значение веса в визуализации
+                document.querySelector(`.weights span:nth-child(${parseInt(index)+1})`).textContent = `w${index}=${value}`;
+                
+                // Пересчитываем выход нейрона
+                const inputs = [0.8, 0.3, 0.5];
+                const weights = [
+                    parseFloat(document.querySelector('.weight-slider[data-index="0"]').value / 10),
+                    parseFloat(document.querySelector('.weight-slider[data-index="1"]').value / 10),
+                    parseFloat(document.querySelector('.weight-slider[data-index="2"]').value / 10)
+                ];
+                
+                let sum = 0;
+                for (let i = 0; i < inputs.length; i++) {
+                    sum += inputs[i] * weights[i];
+                }
+                
+                // Функция активации (ReLU)
+                const output = Math.max(0, sum).toFixed(2);
+                document.getElementById('neuron-output').textContent = output;
+            });
+        });
+
+        // Скрипт для демонстрации распознавания цифр
+        const canvas = document.getElementById('drawing-canvas');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        
+        // Настройка холста
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.lineWidth = 15;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = 'black';
+        
+        // Обработчики событий
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+        document.getElementById('clear-canvas').addEventListener('click', clearCanvas);
+        document.getElementById('recognize-btn').addEventListener('click', recognizeDigit);
+        
+        function startDrawing(e) {
+            isDrawing = true;
+            draw(e);
+        }
+        
+        function draw(e) {
+            if (!isDrawing) return;
+            
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+        }
+        
+        function stopDrawing() {
+            isDrawing = false;
+            ctx.beginPath();
+        }
+        
+        function clearCanvas() {
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('prediction').textContent = '-';
+            document.querySelectorAll('.fill').forEach(bar => {
+                bar.style.width = '0%';
+            });
+            document.querySelectorAll('.percent').forEach(p => {
+                p.textContent = '0%';
+            });
+        }
+        
+        function recognizeDigit() {
+            const prediction = Math.floor(Math.random() * 10);
+            document.getElementById('prediction').textContent = prediction;
+            
+            // Обновляем шкалы уверенности
+            document.querySelectorAll('.confidence-bar').forEach((bar, i) => {
+                const confidence = i === prediction ? 95 : Math.floor(Math.random() * 20);
+                const fill = bar.querySelector('.fill');
+                const percent = bar.querySelector('.percent');
+                
+                fill.style.width = `${confidence}%`;
+                percent.textContent = `${confidence}%`;
+            });
+        }
+        
+        // Скрипт для генерации текста
+        document.getElementById('generate-btn').addEventListener('click', function() {
+            const prompt = document.getElementById('prompt-input').value;
+            const result = document.getElementById('generated-text');
+            const loading = document.querySelector('.loading-animation');
+            
+            if (!prompt.trim()) return;
+            
+            // Показываем анимацию загрузки
+            result.style.opacity = '0.5';
+            loading.style.display = 'flex';
+            
+            setTimeout(() => {
+                const responses = [
+                    "мощный инструмент для решения сложных задач искусственного интеллекта, который имитирует работу человеческого мозга.",
+                    "основа современных систем машинного обучения, способных распознавать образы, понимать речь и генерировать контент.",
+                    "ключевая технология в развитии искусственного интеллекта, позволяющая компьютерам обучаться на данных и принимать решения."
+                ];
+                
+                result.textContent = responses[Math.floor(Math.random() * responses.length)];
+                result.style.opacity = '1';
+                loading.style.display = 'none';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

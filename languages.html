@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Языки программирования | CodePassion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Логотип CodePassion" class="logo">
+            </a>
+            <h1>CodePassion</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="languages.html" class="active">Языки</a></li>
+                <li><a href="python-libs.html">Библиотеки Python</a></li>
+                <li><a href="neural-networks.html">Нейросети</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="languages-page">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Языки программирования</h1>
+                <p>Исследуем инструменты, которые создают цифровой мир</p>
+            </div>
+        </section>
+
+        <section class="language-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#cpp">C++</a></li>
+                    <li><a href="#python">Python</a></li>
+                    <li><a href="#html-css">HTML/CSS</a></li>
+                    <li><a href="#comparison">Сравнение</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="cpp" class="language-section">
+            <div class="container">
+                <div class="language-header">
+                    <img src="cpp-logo.png" alt="Логотип C++" class="language-logo">
+                    <h2>C++</h2>
+                </div>
+                
+                <div class="language-content">
+                    <div class="language-info">
+                        <h3>Мощь и контроль</h3>
+                        <p>C++ - это компилируемый язык общего назначения, который даёт программисту полный контроль над системными ресурсами и памятью. Он сочетает в себе возможности языков высокого и низкого уровней.</p>
+                        
+                        <div class="features">
+                            <h4>Ключевые особенности:</h4>
+                            <ul>
+                                <li>Объектно-ориентированное программирование</li>
+                                <li>Шаблоны (generics)</li>
+                                <li>Прямая работа с памятью (указатели)</li>
+                                <li>Мультипарадигменность</li>
+                                <li>Высокая производительность</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="use-cases">
+                            <h4>Где применяется:</h4>
+                            <ul>
+                                <li>Системное программирование (ОС, драйверы)</li>
+                                <li>Разработка игр (Unreal Engine)</li>
+                                <li>Высокопроизводительные вычисления</li>
+                                <li>Встраиваемые системы</li>
+                                <li>Финансовые системы</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="code-example">
+                        <h3>Пример кода: Калькулятор</h3>
+                        <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double num1, num2;
+    char operation;
+
+    cout &lt;&lt; "Введите первое число: ";
+    cin &gt;&gt; num1;
+    cout &lt;&lt; "Введите операцию (+, -, *, /): ";
+    cin &gt;&gt; operation;
+    cout &lt;&lt; "Введите второе число: ";
+    cin &gt;&gt; num2;
+
+    switch(operation) {
+        case '+':
+            cout &lt;&lt; "Результат: " &lt;&lt; num1 + num2;
+            break;
+        case '-':
+            cout &lt;&lt; "Результат: " &lt;&lt; num1 - num2;
+            break;
+        case '*':
+            cout &lt;&lt; "Результат: " &lt;&lt; num1 * num2;
+            break;
+        case '/':
+            if (num2 != 0)
+                cout &lt;&lt; "Результат: " &lt;&lt; num1 / num2;
+            else
+                cout &lt;&lt; "Ошибка: деление на ноль!";
+            break;
+        default:
+            cout &lt;&lt; "Неподдерживаемая операция!";
+    }
+
+    return 0;
+}</code></pre>
+                        <div class="code-output">
+                            <h4>Вывод программы:</h4>
+                            <img src="cpp-output.gif" alt="Пример работы программы на C++" class="code-gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="python" class="language-section">
+            <div class="container">
+                <div class="language-header">
+                    <img src="python-logo.png" alt="Логотип Python" class="language-logo">
+                    <h2>Python</h2>
+                </div>
+                
+                <div class="language-content">
+                    <div class="language-info">
+                        <h3>Простота и универсальность</h3>
+                        <p>Python - интерпретируемый язык высокого уровня с динамической типизацией. Его философия подчёркивает простоту и читаемость кода, что делает его идеальным для обучения и быстрой разработки.</p>
+                        
+                        <div class="features">
+                            <h4>Ключевые особенности:</h4>
+                            <ul>
+                                <li>Простой и понятный синтаксис</li>
+                                <li>Динамическая типизация</li>
+                                <li>Автоматическое управление памятью</li>
+                                <li>Большая стандартная библиотека</li>
+                                <li>Кроссплатформенность</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="use-cases">
+                            <h4>Где применяется:</h4>
+                            <ul>
+                                <li>Веб-разработка (Django, Flask)</li>
+                                <li>Анализ данных и машинное обучение</li>
+                                <li>Автоматизация и скриптинг</li>
+                                <li>Научные вычисления</li>
+                                <li>Разработка прототипов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="code-example">
+                        <h3>Пример кода: Генератор чисел Фибоначчи</h3>
+                        <pre><code class="language-python">def fibonacci(n):
+    """Генерирует последовательность Фибоначчи"""
+    a, b = 0, 1
+    sequence = []
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+
+# Получаем ввод от пользователя
+try:
+    n = int(input("Введите количество чисел Фибоначчи: "))
+    if n <= 0:
+        print("Пожалуйста, введите положительное число.")
+    else:
+        fib_sequence = fibonacci(n)
+        print(f"Последовательность Фибоначчи из {n} чисел:")
+        print(fib_sequence)
+except ValueError:
+    print("Ошибка: пожалуйста, введите целое число.")</code></pre>
+                        <div class="code-output">
+                            <h4>Вывод программы:</h4>
+                            <img src="python-output.gif" alt="Пример работы программы на Python" class="code-gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="html-css" class="language-section">
+            <div class="container">
+                <div class="language-header">
+                    <div class="dual-logos">
+                        <img src="html-logo.png" alt="Логотип HTML" class="language-logo">
+                        <img src="css-logo.png" alt="Логотип CSS" class="language-logo">
+                    </div>
+                    <h2>HTML & CSS</h2>
+                </div>
+                
+                <div class="language-content">
+                    <div class="language-info">
+                        <h3>Основы веб-разработки</h3>
+                        <p>HTML (HyperText Markup Language) и CSS (Cascading Style Sheets) - фундаментальные технологии для создания веб-страниц. HTML определяет структуру контента, а CSS отвечает за его визуальное представление.</p>
+                        
+                        <div class="features">
+                            <h4>Ключевые особенности HTML:</h4>
+                            <ul>
+                                <li>Семантическая разметка контента</li>
+                                <li>Иерархическая структура документа</li>
+                                <li>Поддержка мультимедиа</li>
+                                <li>Формы для ввода данных</li>
+                                <li>Доступность (accessibility)</li>
+                            </ul>
+                            
+                            <h4>Ключевые особенности CSS:</h4>
+                            <ul>
+                                <li>Селекторы для выбора элементов</li>
+                                <li>Каскадность и наследование</li>
+                                <li>Адаптивный дизайн (медиазапросы)</li>
+                                <li>Анимации и переходы</li>
+                                <li>Flexbox и Grid для макетов</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="use-cases">
+                            <h4>Где применяется:</h4>
+                            <ul>
+                                <li>Создание веб-страниц и сайтов</li>
+                                <li>Веб-приложения</li>
+                                <li>Электронные письма</li>
+                                <li>Документация</li>
+                                <li>Визуализация данных</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="code-example">
+                        <h3>Пример кода: Карточка продукта</h3>
+                        <div class="html-css-example">
+                            <div class="code-column">
+                                <h4>HTML</h4>
+                                <pre><code class="language-html">&lt;div class="product-card"&gt;
+  &lt;img src="product.jpg" alt="Ноутбук"&gt;
+  &lt;div class="product-info"&gt;
+    &lt;h3&gt;Ноутбук Gaming Pro&lt;/h3&gt;
+    &lt;p&gt;Мощный игровой ноутбук с процессором Intel i9 и видеокартой RTX 4080&lt;/p&gt;
+    &lt;div class="price"&gt;149 999 ₽&lt;/div&gt;
+    &lt;button class="buy-btn"&gt;Добавить в корзину&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <div class="code-column">
+                                <h4>CSS</h4>
+                                <pre><code class="language-css">.product-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+.buy-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: #2980b9;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="code-output">
+                            <h4>Результат:</h4>
+                            <img src="html-css-output.gif" alt="Пример работы HTML/CSS" class="code-gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <h2>Сравнение языков программирования</h2>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>C++</th>
+                                <th>Python</th>
+                                <th>HTML/CSS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Тип языка</td>
+                                <td>Компилируемый</td>
+                                <td>Интерпретируемый</td>
+                                <td>Языки разметки и стилей</td>
+                            </tr>
+                            <tr>
+                                <td>Уровень абстракции</td>
+                                <td>Низкий/Средний</td>
+                                <td>Высокий</td>
+                                <td>Декларативный</td>
+                            </tr>
+                            <tr>
+                                <td>Производительность</td>
+                                <td>Очень высокая</td>
+                                <td>Средняя</td>
+                                <td>Не применимо</td>
+                            </tr>
+                            <tr>
+                                <td>Сложность изучения</td>
+                                <td>Высокая</td>
+                                <td>Низкая</td>
+                                <td>Низкая</td>
+                            </tr>
+                            <tr>
+                                <td>Управление памятью</td>
+                                <td>Ручное</td>
+                                <td>Автоматическое</td>
+                                <td>Не применимо</td>
+                            </tr>
+                            <tr>
+                                <td>Основное применение</td>
+                                <td>Системное ПО, игры</td>
+                                <td>Веб, анализ данных, AI</td>
+                                <td>Вёрстка веб-страниц</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="language-choice">
+                    <h3>Какой язык выбрать?</h3>
+                    <p>Выбор языка зависит от ваших целей:</p>
+                    <ul>
+                        <li><strong>C++</strong> - для системного программирования, высокопроизводительных приложений</li>
+                        <li><strong>Python</strong> - для быстрой разработки, анализа данных, машинного обучения</li>
+                        <li><strong>HTML/CSS</strong> - для фронтенд-разработки и создания веб-интерфейсов</li>
+                    </ul>
+                    <p>Многие разработчики изучают несколько языков, чтобы быть универсальными специалистами!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2023 CodePassion. Все права защищены.</p>
+        <div class="footer-links">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="404.html">Страница 404</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

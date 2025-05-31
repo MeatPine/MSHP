@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePassion - Мир программирования</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo-icon.png" type="image/png">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Логотип CodePassion" class="logo">
+            <h1>CodePassion</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="languages.html">Языки</a></li>
+                <li><a href="python-libs.html">Библиотеки Python</a></li>
+                <li><a href="neural-networks.html">Нейросети</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Программирование - это искусство и наука</h2>
+                <p>Исследуем мир кода: от основ до нейросетей</p>
+                <a href="#about" class="cta-button">Узнать больше</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Мои увлечения в IT</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="code-icon">C++</div>
+                    <h3>Системное программирование</h3>
+                    <p>Изучение низкоуровневых возможностей и оптимизации</p>
+                </div>
+                
+                <div class="interest-card">
+                    <img src="python-logo.gif" alt="Логотип Python" class="tech-gif">
+                    <h3>Python & Data Science</h3>
+                    <p>Анализ данных с Pandas, визуализация с Matplotlib</p>
+                </div>
+                
+                <div class="interest-card">
+                    <img src="nn-animation.gif" alt="Анимация нейросети" class="tech-gif">
+                    <h3>Нейронные сети</h3>
+                    <p>Слежу за развитием ИИ и практическими применениями</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Подпишитесь на обновления</h2>
+            <p>Получайте свежие статьи о программировании и нейросетях</p>
+            
+            <form id="subscribe-form">
+                <input type="email" placeholder="Ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2025 CodePassion. Все права защищены.</p>
+        <div class="footer-links">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="404.html">Страница 404</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
